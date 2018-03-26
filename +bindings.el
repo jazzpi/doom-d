@@ -1,28 +1,11 @@
 ;;; private/jazzpi/+bindings.el -*- lexical-binding: t; -*-
 
-(defun spacemacs/alternate-buffer (&optional window)
-  "Switch back and forth between current and last buffer in the
-current window."
-  (interactive)
-  (let ((current-buffer (window-buffer window))
-        (buffer-predicate
-         (frame-parameter (window-frame window) 'buffer-predicate)))
-    ;; switch to first buffer previously shown in this window that matches
-    ;; frame-parameter `buffer-predicate'
-    (switch-to-buffer
-     (or (cl-find-if (lambda (buffer)
-                       (and (not (eq buffer current-buffer))
-                            (or (null buffer-predicate)
-                                (funcall buffer-predicate buffer))))
-                     (mapcar #'car (window-prev-buffers window)))
-         ;; `other-buffer' honors `buffer-predicate' so no need to filter
-         (other-buffer current-buffer t)))))
+(require 'restart-emacs)
 
 (map!
  ;; --- <leader> ---
  (:leader
    :desc "Last buffer" :n "TAB" #'spacemacs/alternate-buffer
-   :desc "Comment"     :n ";"   #'evilnc-comment-operator
    (:desc "file" :prefix "f"
      :desc "Save file" :n "s" #'save-buffer)
    (:desc "workspace" :prefix "W"
@@ -48,4 +31,8 @@ current window."
      :desc "Switch to 7th workspace"  :n "7"   (λ! (+workspace/switch-to 6))
      :desc "Switch to 8th workspace"  :n "8"   (λ! (+workspace/switch-to 7))
      :desc "Switch to 9th workspace"  :n "9"   (λ! (+workspace/switch-to 8))
-     :desc "Switch to last workspace" :n "0"   #'+workspace/switch-to-last)))
+     :desc "Switch to last workspace" :n "0"   #'+workspace/switch-to-last)
+   (:desc "toggle" :prefix "t"
+     :desc "Autocomplete" :n "c" #'jazzpi/toggle-autocomplete)
+   (:desc "quit" :prefix "q"
+     :desc "Restart" :n "r" #'restart-emacs)))
