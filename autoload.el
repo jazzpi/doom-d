@@ -5,8 +5,8 @@
   "Toggle autocomplete by setting `company-idle-delay'"
   (interactive)
   (if company-idle-delay
-      (setq company-idle-delay 0.2)
-    (setq company-idle-delay nil)))
+      (setq company-idle-delay nil)
+    (setq company-idle-delay 0.2)))
 
 ;;;###autoload
 (defun spacemacs/alternate-buffer (&optional window)

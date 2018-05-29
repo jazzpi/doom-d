@@ -1,6 +1,7 @@
 ;;; private/jazzpi/+bindings.el -*- lexical-binding: t; -*-
 
-(require 'restart-emacs)
+(def-package! restart-emacs
+  :commands restart-emacs)
 
 (map!
  ;; --- <leader> ---
