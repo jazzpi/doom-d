@@ -7,5 +7,5 @@ It's not much, but it's mine.
 
 * Installation
 #+BEGIN_SRC sh
-git clone git@github.com:jazzpi/doom-d.git
+git clone git@github.com:jazzpi/doom-d.git ~/.doom.d
 #+END_SRC
