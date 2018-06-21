@@ -1,12 +1,9 @@
-;;; private/jazzpi/+bindings.el -*- lexical-binding: t; -*-
-
-(def-package! restart-emacs
-  :commands restart-emacs)
+;;; .doom.d/+bindings.el -*- lexical-binding: t; -*-
 
 (map!
  ;; --- <leader> ---
  (:leader
-   :desc "Last buffer" :n "TAB" #'spacemacs/alternate-buffer
+   :desc "Last buffer" :n [tab] #'spacemacs/alternate-buffer
    (:desc "file" :prefix "f"
      :desc "Save file" :n "s" #'save-buffer)
    (:desc "workspace" :prefix "W"
@@ -34,6 +31,4 @@
      :desc "Switch to 9th workspace"  :n "9"   (λ! (+workspace/switch-to 8))
      :desc "Switch to last workspace" :n "0"   #'+workspace/switch-to-last)
    (:desc "toggle" :prefix "t"
-     :desc "Autocomplete" :n "c" #'jazzpi/toggle-autocomplete)
-   (:desc "quit" :prefix "q"
-     :desc "Restart" :n "r" #'restart-emacs)))
+     :desc "Autocomplete" :n "c" #'jazzpi/toggle-autocomplete)))

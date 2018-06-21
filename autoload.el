@@ -1,4 +1,4 @@
-;;; private/jazzpi/autoloads.el -*- lexical-binding: t; -*-
+;;; .doom.d/autoloads.el -*- lexical-binding: t; -*-
 
 ;;;###autoload
 (defun jazzpi/toggle-autocomplete ()
@@ -6,7 +6,7 @@
   (interactive)
   (if company-idle-delay
       (setq company-idle-delay nil)
-    (setq company-idle-delay 0.2)))
+    (setq company-idle-delay 0.05)))
 
 ;;;###autoload
 (defun spacemacs/alternate-buffer (&optional window)

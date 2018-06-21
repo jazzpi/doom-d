@@ -1,5 +1,3 @@
 ;; -*- no-byte-compile: t; -*-
-;;; private/jazzpi/packages.el
+;;; .doom.d/packages.el
 
-(package! restart-emacs)
-(package! exec-path-from-shell)

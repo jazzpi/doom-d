@@ -1,0 +1,11 @@
+#+TITLE: My Doom Emacs configuration
+
+It's not much, but it's mine.
+
+* Table of Contents :TOC:
+- [[Installation][Installation]]
+
+* Installation
+#+BEGIN_SRC sh
+git clone git@github.com:jazzpi/doom-d.git
+#+END_SRC
