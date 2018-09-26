@@ -1,7 +1,5 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
-(setq auth-sources '("~/.authinfo.gpg" "~/.authinfo" "~/.netrc"))
-
 (setq doom-font (font-spec :name "Meslo LG S DZ" :size 12 :weight 'light :width 'normal))
 
 (after! which-key
@@ -15,8 +13,11 @@
 
 (with-eval-after-load "config/default/+bindings" (load! "+bindings"))
 
-(setq +magit-hub-enable-by-default 't
-      +magit-hub-features 't)
+;; Evil doesn't really work in the terminal
+(add-to-list 'evil-emacs-state-modes 'term-mode)
+
+;; (setq +magit-hub-enable-by-default 't
+;;       +magit-hub-features 't)
 (after! magit
   (setq magithub-clone-default-directory "~/dev"
         magithub-preferred-remote-method 'ssh_url))
