@@ -118,6 +118,7 @@
        (org              ; organize your plain life in plain text
         +attach          ; custom attachment system
         +babel           ; running code in org
+        +ipython         ; ob-ipython support
         +capture         ; org-capture in and outside of Emacs
         +export          ; Exporting org to whatever you want
         +present)        ; Emacs for presentations
