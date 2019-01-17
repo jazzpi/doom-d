@@ -11,7 +11,7 @@
       helm-move-to-line-cycle-in-source nil
       )
 
-(with-eval-after-load "config/default/+bindings" (load! "+bindings"))
+(with-eval-after-load "config/default/+evil-bindings" (load! "+bindings"))
 
 ;; Evil doesn't really work in the terminal
 (add-to-list 'evil-emacs-state-modes 'term-mode)
