@@ -31,4 +31,6 @@
      :desc "Switch to 9th workspace"  :n "9"   (λ! (+workspace/switch-to 8))
      :desc "Switch to last workspace" :n "0"   #'+workspace/switch-to-last)
    (:desc "toggle" :prefix "t"
-     :desc "Autocomplete" :n "c" #'jazzpi/toggle-autocomplete)))
+     :desc "Autocomplete" :n "c" #'jazzpi/toggle-autocomplete)
+   (:desc "insert" :prefix "i"
+     :desc "Pick color" :n "p" #'webkit-color-picker-show)))
