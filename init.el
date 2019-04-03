@@ -13,9 +13,6 @@
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
-       spellcheck        ; tasing you for misspelling mispelling
-       (syntax-checker   ; tasing you for every semicolon you forget
-        +childframe)     ; use childframes for error popups (Emacs 26+ only)
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
@@ -32,12 +29,12 @@
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
-       doom-modeline     ; a snazzy Atom-inspired mode-line
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
-       fci               ; a `fill-column' indicator
+       fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
-       ;;modeline          ; snazzy, Atom-inspired modeline, plus API
+       ;; indent-guides     ; highlighted indent columns
+       modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink the current line after jumping
        ;;neotree           ; a project drawer, like NERDTree for vim
        treemacs          ; a project drawer, like neotree but cooler
@@ -52,17 +49,17 @@
        window-select     ; visually switch windows
 
        :editor
+       fold              ; (nigh) universal code folding
        ;;(format +onsave)  ; automated prettiness
+       ;;lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :emacs
        dired             ; making dired pretty [functional]
-       ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        ;;eshell            ; a consistent, cross-platform shell (WIP)
-       hideshow          ; basic code-folding support
        imenu             ; an imenu sidebar and searchable code index
        ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
@@ -72,9 +69,12 @@
        ;;docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
+       (flycheck         ; tasing you for every semicolon you forget
+        +childframe)     ; use childframes for error popups (Emacs 26+ only)
+       flyspell          ; tasing you for misspelling mispelling
        gist              ; interacting with github gists
+       ;;lsp
        ;;macos             ; MacOS-specific commands
-       make              ; run make tasks from Emacs
        magit             ; a git porcelain for Emacs
        ;;password-store    ; password manager for nerds
        pdf               ; pdf enhancements
@@ -84,6 +84,7 @@
        tmux              ; an API for interacting with tmux
        upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
+       ;;vterm             ; another terminals in Emacs
 
        :lang
        assembly          ; assembly for fun or debugging
