@@ -13,9 +13,6 @@
 (setq +magit-hub-enable-by-default 't)
 (setq +magit-hub-features 't)
 
-(let ((x-resource-name "emacs"))
-  (setq doom-theme (intern (x-get-resource "theme" ""))))
-
 (doom! :completion
        (company          ; the ultimate code completion backend
         +childframe)     ; a nicer company UI (Emacs 26+ only)

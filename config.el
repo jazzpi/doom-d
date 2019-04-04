@@ -1,6 +1,13 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
 (setq doom-font (font-spec :name "Meslo LG S DZ" :size 12 :weight 'light :width 'normal))
+(defun jazzpi/theme-check ()
+  "Load the theme from Xresources, then remove self from `focus-in-hook'.
+Inspired by https://github.com/kaushalmodi/.emacs.d/blob/0284962584dbb26fc0dcfe9b9f28b6b63d29dd31/init.el#L375"
+  (let ((x-resource-name "emacs"))
+    (load-theme (intern (x-get-resource "theme" ""))))
+  (remove-hook 'focus-in-hook #'jazzpi/theme-check))
+(add-hook 'focus-in-hook #'jazzpi/theme-check)
 
 ;;; PACKAGE CONFIGURATION
 (after! which-key
