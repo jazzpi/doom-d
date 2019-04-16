@@ -20,7 +20,8 @@
         +auto            ; as-you-type code completion
         +childframe)     ; a nicer company UI (Emacs 26+ only)
        (helm             ; the *other* search engine for love and life
-        +fuzzy)          ; enable fuzzy search backend for helm
+        +fuzzy           ; enable fuzzy search backend for helm
+        +childframe)     ; a nicer helm UI (Emacs 26+ only)
        ;;ido               ; the other *other* search engine...
        ;;(ivy              ; a search engine for love and life
        ;; +fuzzy)          ; enable fuzzy search backend for ivy
@@ -66,6 +67,7 @@
 
        :tools
        ;;ansible
+       ;;direnv
        ;;docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
@@ -107,6 +109,7 @@
        (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
+       ;;kotlin            ; a better, slicker Java(Script)
        (latex            ; writing papers in Emacs has never been so fun
         +latexmk
         +okular)
@@ -122,7 +125,8 @@
         +ipython         ; ob-ipython support
         +capture         ; org-capture in and outside of Emacs
         +export          ; Exporting org to whatever you want
-        +present)        ; Emacs for presentations
+        +present         ; Emacs for presentations
+        +protocol)       ; Support for org-protocol:// links
        ;;perl              ; write code no one else can comprehend
        php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
@@ -137,6 +141,7 @@
        sh                ; she sells (ba|z)sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
+       ;;terra             ; Earth and Moon in alignment for performance.
        web               ; the tubes
        ;;vala              ; GObjective-C
 
