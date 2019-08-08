@@ -20,11 +20,14 @@
        :completion
        (company          ; the ultimate code completion backend
         +childframe)     ; a nicer company UI (Emacs 26+ only)
-       (helm             ; the *other* search engine for love and life
-        +fuzzy           ; enable fuzzy search backend for helm
-        +childframe)     ; a nicer helm UI (Emacs 26+ only)
+       ;;(helm             ; the *other* search engine for love and life
+       ;; +fuzzy           ; enable fuzzy search backend for helm
+       ;; +childframe)     ; a nicer helm UI (Emacs 26+ only)
        ;;ido               ; the other *other* search engine...
-       ;;ivy              ; a search engine for love and life
+       (ivy              ; a search engine for love and life
+        +fuzzy
+        +childframe
+        +icons)
 
        :ui
        ;;deft              ; notational velocity for Emacs
