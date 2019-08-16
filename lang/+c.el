@@ -89,3 +89,4 @@
 ;;     (c-comment-onl)))
 
 (c-add-style "sft" sft-c-style)
+(setq-default c-default-style "sft")
