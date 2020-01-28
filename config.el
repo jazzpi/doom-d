@@ -39,3 +39,4 @@ Inspired by https://github.com/kaushalmodi/.emacs.d/blob/0284962584dbb26fc0dcfe9
 ;;; LANGUAGE CONFIGURATION
 
 (add-hook! 'c-mode-common-hook (load! "lang/+c"))
+(add-hook! 'LaTeX-mode-hook (load! "lang/+latex"))
