@@ -18,6 +18,10 @@ Inspired by https://github.com/kaushalmodi/.emacs.d/blob/0284962584dbb26fc0dcfe9
   (setq magithub-clone-default-directory "~/dev"
         magithub-preferred-remote-method 'ssh_url))
 
+; Let me type Dijkstra!
+(after! evil-escape
+  (remove-hook 'doom-post-init-hook #'evil-escape-mode))
+
 (setq +org-dir (expand-file-name "~/Documents/org")
       ;+rust-src-dir (expand-file-name "~/dev/rust/")
       helm-move-to-line-cycle-in-source nil
