@@ -14,10 +14,13 @@
 ;;      Alternatively, press 'gd' (or 'C-c g d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
-;; These need to be set before magit is loaded
+;; These need to be set before their respective modules are loaded
+; magit
 (setq auth-sources '("~/.authinfo.gpg" "~/.authinfo" "~/.netrc"))
 (setq +magit-hub-enable-by-default 't)
 (setq +magit-hub-features 't)
+; latex
+(setq +latex-viewers '(evince))
 
 (doom! :input
        ;;chinese

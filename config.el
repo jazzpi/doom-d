@@ -22,10 +22,8 @@ Inspired by https://github.com/kaushalmodi/.emacs.d/blob/0284962584dbb26fc0dcfe9
 (after! evil-escape
   (remove-hook 'doom-post-init-hook #'evil-escape-mode))
 
-(setq +org-dir (expand-file-name "~/Documents/org")
-      ;+rust-src-dir (expand-file-name "~/dev/rust/")
-      helm-move-to-line-cycle-in-source nil
-      )
+(setq org-directory (expand-file-name "~/ownCloud/org")
+      org-roam-directory (expand-file-name "~/ownCloud/org/roam"))
 
 ;; Evil doesn't really work in the terminal
 (add-to-list 'evil-emacs-state-modes 'term-mode)
@@ -40,3 +38,4 @@ Inspired by https://github.com/kaushalmodi/.emacs.d/blob/0284962584dbb26fc0dcfe9
 
 (add-hook! 'c-mode-common-hook (load! "lang/+c"))
 (add-hook! 'LaTeX-mode-hook (load! "lang/+latex"))
+(add-hook! 'org-mode-hook (load! "lang/+org"))
