@@ -24,8 +24,8 @@ Inspired by https://github.com/kaushalmodi/.emacs.d/blob/0284962584dbb26fc0dcfe9
 (after! evil-escape
   (remove-hook 'doom-post-init-hook #'evil-escape-mode))
 
-(setq org-directory (expand-file-name "~/ownCloud/org")
-      org-roam-directory (expand-file-name "~/ownCloud/org/roam"))
+(setq org-directory (expand-file-name "~/tubcloud/org")
+      org-roam-directory (expand-file-name "~/tubcloud/org/roam"))
 
 ;; Evil doesn't really work in the terminal
 (add-to-list 'evil-emacs-state-modes 'term-mode)
