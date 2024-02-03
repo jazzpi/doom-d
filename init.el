@@ -21,6 +21,8 @@
 (setq +magit-hub-features 't)
 ; latex
 (setq +latex-viewers '(evince))
+; weird nativecomp error workaround (doomemacs#5682)
+(defvar native-comp-deferred-compilation-deny-list nil)
 
 (doom! :input
        ;;bidi              ; (tfel ot) thgir etirw uoy gnipleh
